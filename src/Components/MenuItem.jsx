@@ -1,14 +1,10 @@
 import React from 'react'
 
-export default function MenuItem() {
+export default function MenuItem(title, address, Icon) {
   return (
-    <div>
-        <div className="">
-            
-        </div>
-        <div>
-            
-        </div>
-    </div>
+    <Link>
+        <Icon />
+        <p>{title}</p>
+    </Link>
   )
 }
