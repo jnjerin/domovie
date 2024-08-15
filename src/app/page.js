@@ -1,3 +1,4 @@
+import Results from "@/Components/results";
 const API_KEY = process.env.API_KEY;
 
 
@@ -16,6 +17,8 @@ export default async function Home({ searchParams }) {
   console.log(results)
 
   return (
-    <div>Home</div>
+    <div>
+      <Results results={results} />
+    </div>
   )
 }
