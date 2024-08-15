@@ -12,7 +12,7 @@ export default function Card({ result }) {
                     sm:m-2
                     transition-shadow duration-200 
                     mx-auto-6xl">
-        <Link href={'/movie/${result.id}'}>
+        <Link href={`/movie/${result.id}`}>
             <Image
              src={`https://image.tmdb.org/t/p/original/${
                 result.backdrop_path || result.poster_path
