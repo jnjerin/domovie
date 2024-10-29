@@ -1,4 +1,5 @@
-import Results from '@/components/Results.jsx';
+// import Results from '@/components/Results.jsx';
+import Results from '../../components/Results.jsx'
 
 export default async function SearchPage({ params }) {
   const seachTerm = params.searchTerm;
