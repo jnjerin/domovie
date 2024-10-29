@@ -8,7 +8,7 @@ import SearchBox from "@/Components/SearchBox";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Do Movie",
+  title: "Do Movie - Instant Movie Search & Discovery",
   description: "Your guide to movie recommendations",
 };
 
