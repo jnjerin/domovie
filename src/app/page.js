@@ -2,6 +2,9 @@ import Results from "@/Components/Results.jsx";
 import { Suspense } from "react";
 const API_KEY = process.env.API_KEY;
 
+// Mark the page as dynamically rendered
+export const dynamic = 'force-dynamic';
+
 export default async function Home({ searchParams }) {
   const genre = searchParams.genre || 'fetchTrending'
   const res = await fetch(
