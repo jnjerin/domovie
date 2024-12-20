@@ -1,3 +1,5 @@
+'use client'
+
 import Results from '@/Components/Results.jsx';
 
 export default async function SearchPage({ params }) {
