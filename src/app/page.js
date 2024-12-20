@@ -1,5 +1,8 @@
 'use client'
+
 import Results from "@/Components/Results.jsx";
+import { Suspense } from 'react';
+import Loading from '@/app/loading';
 
 const API_KEY = process.env.API_KEY;
 
@@ -18,8 +21,10 @@ export default async function Home({ searchParams }) {
   const results = data.results
 
   return (
-    <div>
-      <Results results={results} />
-    </div>
+    <Suspense fallback={<Loading />}>
+      <div>
+        <Results results={results} />
+      </div>
+    </Suspense>
   )
 }
