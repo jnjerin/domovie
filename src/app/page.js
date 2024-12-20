@@ -1,10 +1,7 @@
+'use client'
 import Results from "@/Components/Results.jsx";
-import { Suspense } from "react";
-const API_KEY = process.env.API_KEY;
 
-// Mark the page as dynamically rendered
-export const dynamic = 'force-dynamic';
-export const dynamicParams = true;
+const API_KEY = process.env.API_KEY;
 
 export default async function Home({ searchParams }) {
   const genre = searchParams.genre || 'fetchTrending'
@@ -21,10 +18,8 @@ export default async function Home({ searchParams }) {
   const results = data.results
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div>
-        <Results results={results} />
-      </div>
-    </Suspense>
+    <div>
+      <Results results={results} />
+    </div>
   )
 }
