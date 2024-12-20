@@ -1,6 +1,8 @@
 'use client'
 
 import Results from '@/Components/Results.jsx';
+import { Suspense } from 'react';
+import Loading from '@/app/loading';
 
 export default async function SearchPage({ params }) {
   const seachTerm = params.searchTerm;
@@ -10,11 +12,13 @@ export default async function SearchPage({ params }) {
   const data = await res.json();
   const results = data.results;
   return (
-    <div>
-      {results &&
-        results.length ===
-        <h1 className='text-center pt-6'>No results found</h1>}
-      {results && <Results results={results} />}
-    </div>
+    <Suspense fallback={<Loading />}>
+      <div>
+        {results &&
+          results.length ===
+          <h1 className='text-center pt-6'>No results found</h1>}
+        {results && <Results results={results} />}
+      </div>
+    </Suspense>
   );
 }
