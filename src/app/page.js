@@ -6,6 +6,8 @@ import Loading from '@/app/loading';
 
 const API_KEY = process.env.API_KEY;
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home({ searchParams }) {
   const genre = searchParams.genre || 'fetchTrending'
   const res = await fetch(
